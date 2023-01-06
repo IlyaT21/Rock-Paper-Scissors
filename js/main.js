@@ -35,6 +35,10 @@ inputArray.forEach((e) => {
 
             if(machineScore == 5) {
               gameResult.innerText = 'You Lost...';
+              inputArray.forEach((e) => {
+                e.disabled = true;
+              })
+              gameResult.style.color = 'red';
             }
             break;
           case 'scissors':
@@ -45,6 +49,10 @@ inputArray.forEach((e) => {
 
             if(playerScore == 5) {
               gameResult.innerText = 'You Won!';
+              inputArray.forEach((e) => {
+                e.disabled = true;
+              })
+              gameResult.style.color = 'green';
             }
             break;
         }
@@ -59,6 +67,10 @@ inputArray.forEach((e) => {
 
             if(playerScore == 5) {
               gameResult.innerText = 'You Won!';
+              inputArray.forEach((e) => {
+                e.disabled = true;
+              })
+              gameResult.style.color = 'green';
             }
             break;
           case 'paper':
@@ -72,6 +84,10 @@ inputArray.forEach((e) => {
 
             if(machineScore == 5) {
               gameResult.innerText = 'You Lost...';
+              inputArray.forEach((e) => {
+                e.disabled = true;
+              })
+              gameResult.style.color = 'red';
             }
             break;
         }
@@ -86,6 +102,10 @@ inputArray.forEach((e) => {
 
             if(machineScore == 5) {
               gameResult.innerText = 'You Lost...';
+              inputArray.forEach((e) => {
+                e.disabled = true;
+              })
+              gameResult.style.color = 'red';
             }
             break;
           case 'paper':
@@ -96,6 +116,10 @@ inputArray.forEach((e) => {
 
             if(playerScore == 5) {
               gameResult.innerText = 'You Won!';
+              inputArray.forEach((e) => {
+                e.disabled = true;
+              })
+              gameResult.style.color = 'green';
             }
             break;
           case 'scissors':
