@@ -1,8 +1,8 @@
 let inputArray = document.querySelectorAll('.options>button');
 let playerScore = 0;
 let machineScore = 0;
-let gameResult = document.querySelector('#game-result')
-let handResult = document.querySelector('#hand-result')
+let gameResult = document.querySelector('#game-result');
+let handResult = document.querySelector('#hand-result');
 
 inputArray.forEach((e) => {
   e.addEventListener('click', () => {
@@ -25,25 +25,27 @@ inputArray.forEach((e) => {
       case 'rock':
         switch (machineInput) {
           case 'rock':
-            handResult.innerText = 'Draw - Points for Both';
-
-            playerScore++;
-            document.querySelector('#player-score').innerText = playerScore;
-
-            machineScore++;
-            document.querySelector('#machine-score').innerText = machineScore;
+            handResult.innerText = 'Draw';
             break;
           case 'paper':
             handResult.innerText = 'Point for the Machine';
 
             machineScore++;
             document.querySelector('#machine-score').innerText = machineScore;
+
+            if(machineScore == 5) {
+              gameResult.innerText = 'You Lost...';
+            }
             break;
           case 'scissors':
             handResult.innerText = 'Point for You';
 
             playerScore++;
             document.querySelector('#player-score').innerText = playerScore;
+
+            if(playerScore == 5) {
+              gameResult.innerText = 'You Won!';
+            }
             break;
         }
         break;
@@ -54,21 +56,23 @@ inputArray.forEach((e) => {
 
             playerScore++;
             document.querySelector('#player-score').innerText = playerScore;
+
+            if(playerScore == 5) {
+              gameResult.innerText = 'You Won!';
+            }
             break;
           case 'paper':
-            handResult.innerText = 'Draw - Points for Both';
-
-            playerScore++;
-            document.querySelector('#player-score').innerText = playerScore;
-
-            machineScore++;
-            document.querySelector('#machine-score').innerText = machineScore;
+            handResult.innerText = 'Draw';
             break;
           case 'scissors':
             handResult.innerText = 'Point for the Machine';
 
             machineScore++;
             document.querySelector('#machine-score').innerText = machineScore;
+
+            if(machineScore == 5) {
+              gameResult.innerText = 'You Lost...';
+            }
             break;
         }
         break;
@@ -79,21 +83,23 @@ inputArray.forEach((e) => {
 
             machineScore++;
             document.querySelector('#machine-score').innerText = machineScore;
+
+            if(machineScore == 5) {
+              gameResult.innerText = 'You Lost...';
+            }
             break;
           case 'paper':
             handResult.innerText = 'Point for You';
 
             playerScore++;
             document.querySelector('#player-score').innerText = playerScore;
+
+            if(playerScore == 5) {
+              gameResult.innerText = 'You Won!';
+            }
             break;
           case 'scissors':
-            handResult.innerText = 'Draw - Points for Both';
-
-            playerScore++;
-            document.querySelector('#player-score').innerText = playerScore;
-
-            machineScore++;
-            document.querySelector('#machine-score').innerText = machineScore;
+            handResult.innerText = 'Draw';
             break;
         }
         break;
